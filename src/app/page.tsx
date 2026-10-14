@@ -37,19 +37,19 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="border-b border-border bg-surface">
-        <div className="mx-auto flex min-h-[calc(100dvh-65px)] max-w-6xl flex-col justify-center gap-10 px-4 py-10 sm:px-6 md:grid md:min-h-0 md:grid-cols-2 md:items-center md:gap-10 md:py-20">
-          <div className="animate-fade-up">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-10 sm:px-6 md:grid md:min-h-[75vh] md:grid-cols-2 md:items-center md:gap-8 md:py-12 lg:min-h-[80vh] lg:gap-12">
+          <div className="animate-fade-up flex min-h-[65svh] flex-col justify-center py-10 md:block md:min-h-0 md:py-0">
             <p className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">
               Ikeja, Lagos &middot; Nationwide Delivery
             </p>
-            <h1 className="mt-4 font-heading text-3xl font-bold leading-tight text-text sm:text-4xl md:text-5xl">
+            <h1 className="mt-4 font-heading text-3xl font-bold leading-tight text-text sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
               Office Equipment Sales, Repairs and Installation in Lagos
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-text-secondary">
+            <p className="mt-4 text-sm leading-relaxed text-text-secondary sm:text-base md:mt-5">
               We sell, repair, install and supply new and fairly-used printers, laptops and
               photocopiers from our shop in Computer Village, Ikeja, with delivery nationwide.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 md:mt-7">
               <PrimaryButton
                 href={whatsappLink("Hi Doobaross Technologies, I'd like to enquire about...")}
                 target="_blank"
@@ -62,13 +62,13 @@ export default function HomePage() {
               </SecondaryButton>
             </div>
           </div>
-          <div className="animate-fade-up relative aspect-4/3 w-full overflow-hidden rounded-xl border border-border shadow-lg sm:aspect-3/4 sm:max-w-sm sm:justify-self-center md:justify-self-end">
+          <div className="animate-fade-up relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-xl border border-border shadow-lg sm:aspect-3/4 md:mx-0 md:max-h-[65vh] md:max-w-xs md:justify-self-end lg:max-h-none lg:max-w-md">
             <Image
               src="/images/doobaross1.png"
               alt="Doobaross Technologies technician repairing office equipment"
               fill
               preload
-              sizes="(min-width: 768px) 24rem, 100vw"
+              sizes="(min-width: 1024px) 28rem, (min-width: 768px) 20rem, 100vw"
               className="object-cover object-top"
             />
           </div>
@@ -212,16 +212,16 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {[
-              { src: "/images/doobaross1.png", caption: "On-site equipment repair & servicing" },
-              { src: "/images/doobaross2.png", caption: "Printer & photocopier diagnostics" },
-              { src: "/images/doobaross3.png", caption: "Component-level board repair" },
+              { src: "/images/doobaross1.png", ratio: "aspect-1085/1449", caption: "On-site equipment repair & servicing" },
+              { src: "/images/doobaross2.png", ratio: "aspect-square", caption: "Printer & photocopier diagnostics" },
+              { src: "/images/doobaross3.png", ratio: "aspect-1086/1448", caption: "Component-level board repair" },
             ].map((item, i) => (
               <Reveal
                 key={item.src}
                 delay={i * 100}
                 className="group overflow-hidden rounded-xl border border-border bg-background shadow-sm transition-shadow duration-300 hover:shadow-lg"
               >
-                <div className="relative aspect-video w-full bg-background sm:aspect-4/5">
+                <div className={`relative w-full bg-background ${item.ratio} sm:aspect-4/5`}>
                   <Image
                     src={item.src}
                     alt={item.caption}

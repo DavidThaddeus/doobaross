@@ -10,7 +10,7 @@ type ButtonProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-heading font-semibold transition-all duration-200 ease-out min-h-11";
+  "inline-flex items-center justify-center gap-2 px-4 py-3 text-sm sm:px-6 font-heading font-semibold transition-all duration-200 ease-out min-h-11";
 
 export function PrimaryButton({ href, children, className = "", target, icon }: ButtonProps) {
   return (

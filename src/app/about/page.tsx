@@ -45,7 +45,7 @@ export default function AboutPage() {
           aria-hidden="true"
           className="absolute inset-0 bg-linear-to-b from-background/10 via-transparent to-background"
         />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
+        <div className="relative mx-auto flex min-h-[60svh] max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 md:min-h-[65vh] md:py-24">
           <div className="animate-fade-up mx-auto max-w-2xl text-center">
             <p className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">
               Our Story

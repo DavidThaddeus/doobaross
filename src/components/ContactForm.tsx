@@ -58,7 +58,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "mt-1 w-full min-h-11 rounded-md border border-border bg-background px-3 py-2 text-sm text-text shadow-sm transition-colors duration-150 focus:border-primary";
+    "mt-1 w-full min-h-11 rounded-md border border-border bg-background px-3 py-2 text-sm text-text shadow-sm transition-colors duration-150 focus:border-primary focus:outline-none";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">

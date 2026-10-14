@@ -81,8 +81,8 @@ const contactDetails = [
 export default function ContactPage() {
   return (
     <>
-      <section className="border-b border-border bg-surface py-14">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="flex min-h-[45svh] flex-col justify-center border-b border-border bg-surface py-14 md:min-h-[50vh]">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
           <SectionHeading
             as="h1"
             eyebrow="Get In Touch"
