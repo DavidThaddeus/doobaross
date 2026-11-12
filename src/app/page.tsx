@@ -64,7 +64,7 @@ export default function HomePage() {
           </div>
           <div className="animate-fade-up relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-xl border border-border shadow-lg sm:aspect-3/4 md:mx-0 md:max-h-[65vh] md:max-w-xs md:justify-self-end lg:max-h-none lg:max-w-md">
             <Image
-              src="/images/doobaross1.png"
+              src="/images/founder-at-work.jpg"
               alt="Doobaross Technologies technician repairing office equipment"
               fill
               preload
@@ -212,8 +212,8 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {[
-              { src: "/images/doobaross1.png", ratio: "aspect-1085/1449", caption: "On-site equipment repair & servicing" },
-              { src: "/images/doobaross2.png", ratio: "aspect-square", caption: "Printer & photocopier diagnostics" },
+              { src: "/images/founder-at-work.jpg", ratio: "aspect-1274/1668", caption: "On-site equipment repair & servicing" },
+              { src: "/images/printer-repair.jpg", ratio: "aspect-1187/1590", caption: "Printer & photocopier diagnostics" },
               { src: "/images/doobaross3.png", ratio: "aspect-1086/1448", caption: "Component-level board repair" },
             ].map((item, i) => (
               <Reveal

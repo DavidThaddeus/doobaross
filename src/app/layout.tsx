@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     description:
       "Office equipment sales, repairs, installation and supply based in Computer Village, Ikeja, Lagos. Nationwide delivery.",
     url: siteUrl,
-    images: [{ url: "/images/doobaross1.png", width: 1080, height: 1440, alt: business.name }],
+    images: [{ url: "/images/founder-at-work.jpg", width: 1274, height: 1668, alt: business.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${business.name} | Office Equipment Sales & Repairs`,
     description:
       "Office equipment sales, repairs, installation and supply based in Computer Village, Ikeja, Lagos. Nationwide delivery.",
-    images: ["/images/doobaross1.png"],
+    images: ["/images/founder-at-work.jpg"],
   },
 };
 
@@ -70,7 +70,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#business`,
   name: business.name,
-  image: [`${siteUrl}/images/doobaross1.png`, `${siteUrl}/images/doobaross2.png`],
+  image: [`${siteUrl}/images/founder-at-work.jpg`, `${siteUrl}/images/printer-repair.jpg`],
   logo: `${siteUrl}/images/logo-full.png`,
   description:
     "Office equipment sales, repairs, installation and supply in Computer Village, Ikeja, Lagos, covering printers, photocopiers, laptops and networking equipment.",

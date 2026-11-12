@@ -95,7 +95,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={100} className="relative mx-auto aspect-3/4 w-full max-w-sm overflow-hidden rounded-xl border border-border shadow-lg">
             <Image
-              src="/images/doobaross2.png"
+              src="/images/printer-repair.jpg"
               alt="Doobaross Technologies technician servicing a photocopier"
               fill
               sizes="(min-width: 768px) 24rem, 90vw"
@@ -128,7 +128,7 @@ export default function AboutPage() {
           <Reveal className="mx-auto mt-10 flex max-w-3xl flex-col overflow-hidden rounded-xl border border-border bg-background shadow-sm sm:flex-row">
             <div className="relative aspect-4/3 w-full shrink-0 sm:aspect-auto sm:w-64">
               <Image
-                src="/images/doobaross1.png"
+                src="/images/founder-portrait.jpg"
                 alt={`${business.founder}, ${business.founderTitle} of Doobaross Technologies`}
                 fill
                 sizes="(min-width: 640px) 16rem, 100vw"
