@@ -1,8 +1,9 @@
-type BadgeVariant = "new" | "used" | "in-stock" | "out-of-stock" | "neutral";
+type BadgeVariant = "new" | "used" | "both" | "in-stock" | "out-of-stock" | "neutral";
 
 const styles: Record<BadgeVariant, string> = {
   new: "bg-primary text-white",
   used: "bg-text-secondary text-white",
+  both: "bg-background text-text border border-border",
   "in-stock": "bg-success text-white",
   "out-of-stock": "bg-accent text-white",
   neutral: "bg-surface text-text-secondary border border-border",

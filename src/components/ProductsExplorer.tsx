@@ -6,7 +6,6 @@ import ProductCard from "./ProductCard";
 import Reveal from "./Reveal";
 import WhatsAppIcon from "./WhatsAppIcon";
 import {
-  brands,
   productCategories,
   products,
   whatsappLink,
@@ -14,7 +13,13 @@ import {
   type ProductCondition,
 } from "@/lib/site-config";
 
-type ConditionFilter = ProductCondition | "All";
+type ConditionFilter = Exclude<ProductCondition, "New & Used"> | "All";
+
+// Only offer filters that match at least one product.
+const categories = productCategories.filter((c) => products.some((p) => p.category === c));
+const brands = Array.from(new Set(products.map((p) => p.brand))).sort((a, b) =>
+  a === "Various" ? 1 : b === "Various" ? -1 : a.localeCompare(b),
+);
 
 export default function ProductsExplorer() {
   const [category, setCategory] = useState<ProductCategory | "All">("All");
@@ -24,7 +29,8 @@ export default function ProductsExplorer() {
   const filtered = useMemo(() => {
     return products.filter((p) => {
       if (category !== "All" && p.category !== category) return false;
-      if (condition !== "All" && p.condition !== condition) return false;
+      if (condition !== "All" && p.condition !== condition && p.condition !== "New & Used")
+        return false;
       if (brand !== "All" && p.brand !== brand) return false;
       return true;
     });
@@ -73,7 +79,7 @@ export default function ProductsExplorer() {
             >
               All Categories
             </button>
-            {productCategories.map((c) => (
+            {categories.map((c) => (
               <button
                 key={c}
                 onClick={() => setCategory(c)}

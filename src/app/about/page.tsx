@@ -7,7 +7,7 @@ import CountUp from "@/components/CountUp";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhyChooseCard from "@/components/WhyChooseCard";
 import { PrimaryButton } from "@/components/Buttons";
-import { business, whatsappLink, whyChooseUs } from "@/lib/site-config";
+import { brands, business, whatsappLink, whyChooseUs } from "@/lib/site-config";
 
 const description =
   "Doobaross Technologies is a registered office equipment company (RC 2366544) based in Computer Village, Ikeja, Lagos, selling, repairing and installing equipment nationwide under founder Rasaq Abdulsalam.";
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { end: 10, suffix: "+", label: "Years in Business" },
-  { end: 8, suffix: "", label: "Brands Supported" },
+  { end: brands.length, suffix: "", label: "Brands Supported" },
   { end: 36, suffix: "+", label: "States Reached" },
   { end: 2, suffix: "", label: "WhatsApp Lines" },
 ];

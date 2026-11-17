@@ -3,7 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ProductsExplorer from "@/components/ProductsExplorer";
 
 const description =
-  "Browse new and fairly-used printers, laptops, photocopiers, accessories and networking equipment from Doobaross Technologies in Computer Village, Ikeja, Lagos.";
+  "Browse new and fairly-used HP printers and photocopiers, laptops from HP, Lenovo, Dell, Microsoft and Apple, iPhones and HP toner from Doobaross Technologies in Computer Village, Ikeja, Lagos.";
 
 export const metadata: Metadata = {
   title: "Products",

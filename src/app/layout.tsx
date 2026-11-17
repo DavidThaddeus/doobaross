@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: `%s | ${business.name}`,
   },
   description:
-    "Office equipment sales, repairs, installation and supply in Computer Village, Ikeja, Lagos, covering printers, photocopiers, laptops and networking equipment. Nationwide delivery.",
+    "Office equipment sales, repairs, installation and supply in Computer Village, Ikeja, Lagos, covering printers, photocopiers, laptops, phones and networking equipment. Nationwide delivery.",
   keywords: [
     "office equipment Lagos",
     "printer repair Computer Village",

@@ -17,7 +17,11 @@ export default function ProductCard({ product }: { product: Product }) {
         />
         {/* Badges: muted until the card is hovered, then full color */}
         <div className="absolute left-3 top-3 flex gap-2 opacity-60 grayscale-[40%] transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0">
-          <Badge variant={product.condition === "New" ? "new" : "used"}>{product.condition}</Badge>
+          <Badge
+            variant={
+              product.condition === "New" ? "new" : product.condition === "Used" ? "used" : "both"
+            }
+          >{product.condition}</Badge>
           <Badge variant={product.inStock ? "in-stock" : "out-of-stock"}>
             {product.inStock ? "In Stock" : "Out of Stock"}
           </Badge>

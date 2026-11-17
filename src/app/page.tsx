@@ -26,12 +26,13 @@ import {
   whatsappLink,
   whyChooseUs,
   brandLogos,
+  brands,
 } from "@/lib/site-config";
 
 const trustIcons = [CheckBadgeIcon, TruckIcon, CubeIcon, ClockIcon];
 
 export default function HomePage() {
-  const featured = products.slice(0, 6);
+  const featured = products.filter((p) => p.featured).slice(0, 6);
 
   return (
     <>
@@ -46,8 +47,8 @@ export default function HomePage() {
               Office Equipment Sales, Repairs and Installation in Lagos
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-text-secondary sm:text-base md:mt-5">
-              We sell, repair, install and supply new and fairly-used printers, laptops and
-              photocopiers from our shop in Computer Village, Ikeja, with delivery nationwide.
+              We sell, repair, install and supply new and fairly-used printers, photocopiers,
+              laptops and phones from our shop in Computer Village, Ikeja, with delivery nationwide.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 md:mt-7">
               <PrimaryButton
@@ -149,7 +150,7 @@ export default function HomePage() {
           {[
             { end: 10, suffix: "+", label: "Years in Business" },
             { end: 2, suffix: "", label: "Active WhatsApp Lines" },
-            { end: 8, suffix: "", label: "Brands Supported" },
+            { end: brands.length, suffix: "", label: "Brands Supported" },
             { end: 36, suffix: "+", label: "States Reached (Nationwide)" },
           ].map((stat, i) => (
             <Reveal
